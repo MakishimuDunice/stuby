@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Example page</title>
+    <link href="./tsk3.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li>
+               <img src="./For 3rd task/logo.png" class="logo">
+            </li>
+            <li class="right-top">
+                <div class="prof">
+                    <img src="./For 3rd task/ава1.png" class="ava-img inl">
+                    <select name="prof" class="prof-s inl">
+                        <option selected>Bob Nilson</option>
+                        <option>option2</option>
+                        <option>option3</option>
+                        <option>option4</option>
+                    </select>
+                </div>
+            </li>
+            <li class="right-top">
+                <div class="top-button">
+                    <img src="./For 3rd task/zn.jpg" class="img-top">
+                    <ul class="head-ul">
+                        <li>6</li>
+                        <li>5</li>
+                        <li>5</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+        <!-- Left side of page -->
+    <div class="ls-menu">
+        <ul>
+            <li>
+                <img src="./For 3rd task/001.png" class="ls-top-img">
+            </li>
+            <li class="ls-search">
+                <input type="search" value="Search..." class="search-button">
+                <img src="./For 3rd task/002.png" class="sch-img">
+            </li>
+            <li class="today m-block mm">
+                <a href="#tod" class="tod-src">
+                    <img src="./For 3rd task/003.png" class="today-img rel">
+                    Today
+                </a>
+            </li>
+            <li class="InOu m-block mm on-off-inb">
+                 <a href="#inout" class="in-ou-src">
+                    <img src="./For 3rd task/004.png" class="inout-img rel on-off-window">
+                    Inbox/outbox
+                    <img src="./For 3rd task/011.jpg" class="r-img">
+                </a>
+            </li>
+            <li class="Calendar m-block mm on-off-calendar">
+                <a href="#cr" class="calend-src">
+                    <img src="./For 3rd task/004.png" class="calendar-img rel">
+                    Calendar
+                    <img src="./For 3rd task/011.jpg" class="r-img">
+                </a>
+            </li>
+            <li class="Ts m-block mm go-tsk">
+                <a href="#ts" class="ts-src">
+                    <img src="./For 3rd task/005.png" class="task-img rel on-off-window">
+                    Tasks
+                    <img src="./For 3rd task/011.jpg" class="r-img"> <!--!!!!!!!! -->
+                </a>
+                <ul class="sub-menu mm on-off-tsk">
+                    <li class="on-off-bm">
+                        <a href="#bm">
+                            Best Moments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#atl">
+                        Another Task List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#an">
+                        Add new+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+        <!-- Middle content -->
+    <div class="content">
+        <div class="top-of-middle">
+            <h1>Inbox/Outbox</h1>
+            <div class="gray-fat-line">
+                <img src="./For 3rd task/007.png" class="home-img">
+                <span class="home-span">Home</span>
+                <img src="./For 3rd task/008.png" class="v-img">
+            </div>
+        </div>
+
+                   <!--!!! Hiding Calendar !!!-->
+
+        <div class="calendar calendar-window">
+            <table class="top-blocks">
+                <tr>
+                    <td class="tod">
+                        today
+                    </td>
+                    <td class="mon">
+                        month
+                    </td>
+                    <td class="w-d">
+                        week day
+                    </td>
+                </tr>
+            </table>
+            <table class="this-is-calendar">
+                <tr class="header-of-table">
+                    <th>
+                        SUN
+                    </th>
+                    <th>
+                        MON
+                    </th>
+                    <th>
+                        TUE
+                    </th>
+                    <th>
+                        WED
+                    </th>
+                    <th>
+                        THU
+                    </th>
+                    <th>
+                        FRI
+                    </th>
+                    <th>
+                        SAT
+                    </th>
+                </tr>
+                <tr class="top-line">
+                    <td class="gray-part-of-top-line">
+                        27
+                    </td>
+                    <td class="gray-part-of-top-line">
+                        28
+                    </td>
+                    <td class="gray-part-of-top-line">
+                        29
+                    </td>
+                    <td class="gray-part-of-top-line">
+                        30
+                    </td>
+                    <td class="gray-part-of-top-line">
+                        31
+                    </td>
+                    <td>
+                        1
+                        <img src="./For 3rd task/календ1.png" class="a-d-e-img">
+                    </td>
+                    <td>
+                        2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        8
+                    </td>
+                    <td>
+                        9
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        10
+                        <img src="./For 3rd task/календ2.png" class="l-e-img">
+                    </td>
+                    <td>
+                        11
+                    </td>
+                    <td>
+                        12
+                        <img src="./For 3rd task/календ3.png" class="four-p-r-e-red-img">
+                    </td>
+                    <td>
+                        13
+                    </td>
+                    <td>
+                        14
+                    </td>
+                    <td class="colored-day">
+                        15
+                        <img src="./For 3rd task/календ4.png" class="c-d-img">
+                    </td>
+                    <td>
+                        16
+                        <img src="./For 3rd task/календ5.png" class="b-p-img">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        17
+                    </td>
+                    <td>
+                        18
+                    </td>
+                    <td>
+                        19
+                        <img src="./For 3rd task/календ6.png" class="four-p-r-e-green-img">
+                    </td>
+                    <td>
+                        20
+                    </td>
+                    <td>
+                        21
+                    </td>
+                    <td>
+                        22
+                    </td>
+                    <td>
+                        23
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        24
+                    </td>
+                    <td>
+                        25
+                    </td>
+                    <td>
+                        26
+                    </td>
+                    <td>
+                        27
+                    </td>
+                    <td>
+                        28
+                        <a>
+                            <img src="./For 3rd task/календ7.png" class="c-f-gogle-img">
+                        </a>
+                    </td>
+                    <td>
+                        29
+                    </td>
+                    <td>
+                        30
+                    </td>
+                </tr>
+                <tr class="bottom-line">
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        7
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--!!! Hiding Calendar !!!-->
+
+        <!--!!! Hiding Bestmoments !!!-->
+
+        <div class="best-moments-block menu-window-bm">
+            <table>
+                <tr>
+                    <td colspan="2" class="bm-t">
+                        Bestmoments
+                    </td>
+                    <td>
+                        <img src="./For 3rd task/zam1.png" class="bm-t-img">
+                    </td>
+                </tr>
+                <tr class="underlined">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        This is the first task
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr class="underlined">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        gdtyghidrtgfsrdf
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr class="underlined">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        dgvbyhuyidgsrtgxdg
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr class="underlined">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        dfybhgudkvgzasrxs
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr class="underlined">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        ftgusvijodszfv
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr class="underlined">
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        ggvdxfyarbijtrb
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+                <div class="any-fields">
+                    <input type="text" class="text-bot">
+                    <input type="text" value="no due date" class="inp-dat">
+                    <div class="little-div-bot">
+                        <img src="./For 3rd task/zam5.png" class="bot-v-but-one">
+                        <img src="./For 3rd task/zam6.png" class="bot-v-but-two">
+                    </div>
+                </div>
+                <div class="add-buttons">
+                    <button class="red-but">
+                        Add task
+                    </button>
+                    <button class="glass-but">
+                        Cancel
+                    </button>
+                    <img src="./For 3rd task/zam3.png" class="flag-img">
+                    <img src="./For 3rd task/zam2.png" class="alarm-img">
+                </div>
+                <div class="add-task">
+                    <span>
+                        Add task
+                    </span>
+                    <img src="./For 3rd task/zam4.png" class="around-img">
+                </div>
+
+        </div>
+
+        <!--!!! Hiding Bestmoments !!!-->
+
+        <!--!!! Hiding Inbox/Outbox !!!-->
+
+        <div class="inbox-outbox-block inbox-menu-line">
+            <div class="blue-inbox">
+                <b>Inbox(3)</b>
+            </div>
+            <div class="gray-outbox">
+                Outbox
+            </div>
+            <table class="messages-tab">
+                <tr class="head-line">
+                    <th>
+                        <input type="checkbox">
+                    </th>
+                    <th colspan="3">
+                        <select class="blue-sel-box">
+                            <option>
+                                Accept/Decline
+                            </option>
+                            <option>
+                                Top/Bottom
+                            </option>
+                            <option>
+                                Left/Right
+                            </option>
+                        </select>
+                        <span class="mess-num">
+                            1-30 of 789
+                        </span>
+                    </th>
+                    <th>
+                        <div class="v-cont">
+                            <img src="./For 3rd task/v-on-gray-left.jpg" class="v-l-img">
+                            <img src="./For 3rd task/v-on-gray-right.jpg" class="v-r-img">
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st">
+                            <input class="inp-for-st" type="checkbox" value="1" name="k">
+                            <span class="sp-for-st">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <b>New server for datacenter needed</b>
+                    </td>
+                    <td>
+                        <img src="./For 3rd task/skr.png" class="skr-tab">
+                    </td>
+                    <td>
+                        <b>16:30 PM</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st-wh">
+                            <input class="inp-for-st-wh" type="checkbox" value="1" name="kk">
+                            <span class="sp-for-st-wh">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <b>Please help us on customization of new secure server</b>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <b>March 15</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st">
+                            <input class="inp-for-st" type="checkbox" value="1" name="k">
+                            <span class="sp-for-st">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Lorem ipsun dolor sit amet
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 15
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st-wh">
+                            <input class="inp-for-st-wh" type="checkbox" value="1" name="kk">
+                            <span class="sp-for-st-wh">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Dolor sit amet, consectetuer adipiscing
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 14
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st">
+                            <input class="inp-for-st" type="checkbox" value="1" name="k" checked>
+                            <span class="sp-for-st">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Lorem ipsun dolor sit amet
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 15
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st-wh">
+                            <input class="inp-for-st-wh" type="checkbox" value="1" name="kk" checked>
+                            <span class="sp-for-st-wh">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Dolor sit amet, consectetuer adipiscing
+                    </td>
+                    <td>
+                        <img src="./For 3rd task/skr2.png" class="skr-tab">
+                    </td>
+                    <td>
+                        March 14
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st">
+                            <input class="inp-for-st" type="checkbox" value="1" name="k" checked>
+                            <span class="sp-for-st">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Lorem ipsun dolor sit amet
+                    </td>
+                    <td>
+                        <img src="./For 3rd task/skr.png" class="skr-tab">
+                    </td>
+                    <td>
+                        March 15
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st-wh">
+                            <input class="inp-for-st-wh" type="checkbox" value="1" name="kk">
+                            <span class="sp-for-st-wh">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Dolor sit amet, consectetuer adipiscing
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 14
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st">
+                            <input class="inp-for-st" type="checkbox" value="1" name="k">
+                            <span class="sp-for-st">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Lorem ipsun dolor sit amet
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 15
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st-wh">
+                            <input class="inp-for-st-wh" type="checkbox" value="1" name="kk">
+                            <span class="sp-for-st-wh">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Dolor sit amet, consectetuer adipiscing
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 14
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st">
+                            <input class="inp-for-st" type="checkbox" value="1" name="k" checked>
+                            <span class="sp-for-st">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Lorem ipsun dolor sit amet
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        March 15
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>
+                        <label class="lbl-for-st-wh">
+                            <input class="inp-for-st-wh" type="checkbox" value="1" name="kk" checked>
+                            <span class="sp-for-st-wh">
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        Dolor sit amet, consectetuer adipiscing
+                    </td>
+                    <td>
+                        <img src="./For 3rd task/skr2.png" class="skr-tab">
+                    </td>
+                    <td>
+                        March 14
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--!!! Hiding Inbox/Outbox !!!-->
+    </div>
+        <!-- Right side of page -->
+    <div class="rs-content">
+        <table class="top-rs-cont">
+           <tr class="title">
+               <td class="float-right">
+                   <label for="title-field">
+                       Title
+                   </label>
+               </td>
+               <td>
+                   <input type="text" name="tit" id="title-field" value="what you gotta do?" class="title-f">
+               </td>
+           </tr>
+            <tr class="list-ag">
+                <td class="float-right">
+                    <label for="one">
+                        List/Agenda
+                    </label>
+                </td>
+                <td>
+                    <select name="001" id="one" class="lis-ag-sel">
+                        <option>Best Moments</option>
+                        <option>The Badest Moments Ever</option>
+                    </select>
+                    <input type="radio" id="two" checked>
+                    <label for="two" class="est-l">
+                        Tasks
+                    </label>
+                    <input type="radio" id="three">
+                    <label for="three" class="est-l">
+                        Meeting
+                    </label>
+                </td>
+            </tr>
+            <tr class="assign-to">
+                <td class="float-right">
+                    <label for="four">
+                        Assign to
+                    </label>
+                </td>
+                <td>
+                    <select name="op" id="four" class="assig">
+                        <option> </option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="priority">
+                <td class="float-right">
+                    <label for="five">
+                        Pryority
+                    </label>
+                </td>
+                <td>
+                    <select id="five" class="pry-ur">
+                        <option>Urgent</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                    <label for="sts" class="est-l">
+                        Status
+                    </label>
+                    <select id="sts" class="stat-pen">
+                        <option>Pending</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="start">
+                <td class="float-right">
+                    <label for="dtd">
+                        Start
+                    </label>
+                </td>
+                <td>
+                    <div>
+                        <input type="datetime" id="dtd" value="06 November 2013 - 10:50" class="start-f">
+                        <img src="./For 3rd task/календ.jpg" class="calend-img">
+                    </div>
+                </td>
+            </tr>
+            <tr class="stop">
+                <td class="float-right">
+                    <label for="sp">
+                        Stop
+                    </label>
+                </td>
+                <td>
+                    <div>
+                        <input type="datetime" id="sp" value="06 November 2013 - 10:50" class="stop-f">
+                        <img src="./For 3rd task/календ.jpg" class="calend-img">
+                    </div>
+                </td>
+            </tr>
+            <tr class="reminder">
+                <td class="float-right">
+                    <label for="rem" >
+                        Reminder
+                    </label>
+                </td>
+                <td>
+                    <div>
+                        <input type="datetime" id="rem" class="remid-f">
+                        <img src="./For 3rd task/календ.jpg" class="calend-img">
+                    </div>
+                </td>
+            </tr>
+            <tr class=location">
+                <td class="float-right">
+                    <label for="locc">
+                        Location
+                    </label>
+                </td>
+                <td>
+                    <div>
+                        <input type="datetime" id="locc" class="loc-f">
+                        <a href="https://www.google.ru/maps/preview?source=newuser-ws">
+                            <img src="./For 3rd task/gm.jpg" class="gm-img" >
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <tr class="estimate">
+                <td class="float-right">
+                    <label for="est" class="spt">
+                        Estimate
+                    </label>
+                </td>
+                <td>
+                    <input type="text" id="est" value="1:30" class="est-f">
+                    <label for="est2" class="est-l spt">
+                        Spent
+                    </label>
+                    <input type="text" id="est2" value="2:30" class="sp-f">
+                </td>
+            </tr>
+            <tr class="attach">
+                <td class="float-right">
+                    <label for="att">
+                        Attach
+                    </label>
+                </td>
+                <td>
+                    <input type="button" id="att" value="Select File" class="att-f">
+                </td>
+            </tr>
+        </table>
+        <div class="check-list">
+            <table class="che-tab">
+                <tr>
+                    <td>
+                        <input type="checkbox" checked>
+                    </td>
+                    <td class="gr rig-c">
+                        subtask
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="st-two rig-c">
+                        subtask2
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gr">
+                        +
+                    </td>
+                    <td class="gr rig-c">
+                        Anadir una subtarea
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="notes-list">
+            <textarea class="not-here-f"> notes here
+            </textarea>
+            <img src="./For 3rd task/009.png" class="t-r-ic">
+        </div>
+        <div class="first-comment">
+            <table class="comm-tb">
+                <tr>
+                    <td rowspan="2">
+                        <img src="./For 3rd task/014.jpg" class="fir-com">
+                    </td>
+                    <td class="grey-bg top-cel">
+                        <span>Bob Nilson</span> at Jul 25, 2012 11:09
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grey-bg bot-cel">
+                       Lorem ipsum dolor sir amet, consectetuer adipisking elit sed, diam nonummy nibh euismod tincidunt ut laorit dolore magna aliquam elat volutpat
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="second-comment">
+            <table class="comm-tab">
+                <tr>
+                    <td class="grey-bg top-cel rich">
+                        <span>Richard Doe</span> at Jul 25, 2012 11:09
+                    </td>
+                    <td rowspan="2">
+                        <img src="./For 3rd task/013.jpg" class="sec-com">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grey-bg bot-cel rich">
+                        Lorem ipsum dolor sir amet, consectetuer adipisking elit sed, diam nonummy nibh euismod tincidunt ut laorit dolore magna aliquam elat volutpat
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="message-text">
+            <input type="text" value="Type a message here..." class="mess-f">
+            <img src="./For 3rd task/010.png" class="blue-but">
+        </div>
+    </div>
+</body>
+</html>
