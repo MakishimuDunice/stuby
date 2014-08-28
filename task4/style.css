@@ -1,0 +1,26 @@
+/*Dunice Study. Task 4 styles*/
+body{
+    background-color:lightseagreen;
+}
+#wrap {
+
+    margin-left: 40%;
+}
+.to-do-but{
+    width:90px;
+    height:30px;
+    background-color:orangered;
+    border-radius:10px;
+}
+#dick{
+    width:450px;
+    height:50px;
+
+    margin-top:1%;
+    margin-left:38%;
+
+    background-color: orangered
+}
+.none{
+   visibility:hidden;
+}
