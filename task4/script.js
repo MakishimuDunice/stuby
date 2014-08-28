@@ -15,7 +15,7 @@ $(document).ready(function (){
         }
         else if ($('#input-field').val().length) {
             var toAdd = $('input[name=checkListItem]').val();
-            $('.list').append('<li id="item">' + toAdd + '</li');
+            $('.list').append('<li id="item">' + toAdd + '</li>');
             $('#input-field').val('');
             $('#dick').addClass('none');
 
