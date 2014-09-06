@@ -14,12 +14,31 @@ $(document).ready(function (){
             success: function beatly(data){
                 var short = data.data.url;
                 get_url(short);
+                save_url(url, short);
             }
         });
-
-        function get_url(a){
-            $('#list').append('<li id="item">' + a + '</li>');
-            $('#input-field').val('');
-        }
     });
 });
+
+function get_url(a){
+  $('#list').append('<li id="item">' + a + '</li>');
+  $('#input-field').val('');
+}
+
+function save_url(long_url, short_url) {
+  $.ajax({
+    url: "/save",
+    data: {
+      long_url : long_url,
+      short_url: short_url
+    },
+    type: "POST",
+    dataType: "json",
+    success: function(data, textStatus, jqXHR ) {
+      alert(data.status + "\n" + data.modelId);
+    },
+    error: function(jqXHR, textStatus, errorThrown ) {
+      console.log("error", jqXHR);
+    }
+  });
+}

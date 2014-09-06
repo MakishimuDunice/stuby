@@ -38,7 +38,11 @@ if ('production' == app.get('env')) {
 // Routes
 
 
-app.get('/', routes.index);
+app.get( '/', routes.index);
+app.post("/save", routes.saveUrls);
+
+
+// Listening
 
 app.listen(app.get("port") || 3000, function(){
   console.log("Express server listening on port %d in %s mode", app.get('port'), app.settings.env);
@@ -56,6 +60,4 @@ var URLSchema = mongoose.Schema({
   short_url: String
 });
 
-var url = mongoose.model('url', URLSchema);
-var silence = new url({ long_url: 'Silence',short_url: 'fdff' });
-console.log(silence.name);
+mongoose.model('url', URLSchema);
