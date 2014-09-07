@@ -40,7 +40,7 @@ if ('production' == app.get('env')) {
 
 app.get( '/', routes.index);
 app.post("/save", routes.saveUrls);
-
+app.post("/del", routes.delUrl);
 
 // Listening
 
@@ -55,9 +55,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
     console.log("Connected to mongodb://localhost/task6_part2");
 });
-var URLSchema = mongoose.Schema({
+var URLSchema = new mongoose.Schema({
   long_url: String,
   short_url: String
 });
 
-mongoose.model('url', URLSchema);
+var UrlModel = mongoose.model('url', URLSchema);
+exports.UrlModel = UrlModel;

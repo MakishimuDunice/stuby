@@ -1,20 +1,21 @@
 mongoose = require("mongoose");
-
 /*
  * GET home page.
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Get short URL right now! It\'s here only! WOOOOOOW!!! ' })
+  UrlModel = require('../app').UrlModel;
+  UrlModel.find(function(err, entries) {
+    if (err) return console.error(err);
+    res.render('index', {title: 'Get short URL right now! It\'s here only! ', entries: entries});
+
+  });
 };
 
 exports.saveUrls = function(req, res, next) {
   UrlModel = mongoose.model("url");
-
   console.log("Get request from ", req.url);
   console.log(req.body);
-
-  // здесь должны быть проверки на наличие всех полей и их валидность.
 
   newUrl = new UrlModel(req.body);
   newUrl.save(function(err, urlInst) {
@@ -36,10 +37,29 @@ exports.saveUrls = function(req, res, next) {
         message: "There aren't the model you are looking for"
       });
     }
-
-    return res.send(200, {
-      status : "OK",
-      modelId: urlInst._id
+    UrlModel.find(function(err, entries) {
+      if (err) return console.error(err);
+      console.log('ADD NEW URL');
+      res.render('list', {entries: entries});
     });
+
+    // return res.send(200, {
+    //   status : "OK",
+    //   modelId: urlInst._id
+    // });
   });
 };
+exports.delUrl = function(req, res) {
+  UrlModel = mongoose.model("url");
+  var elemId = req.body.id;
+  var elem = UrlModel.find({_id: elemId});
+  elem.remove(function(err, entry) {
+    if (err) return console.error(err);
+
+      UrlModel.find(function(err, entries) {
+        if (err) return console.error(err);
+        res.render('list', { entries: entries});
+  });
+  });
+
+}
