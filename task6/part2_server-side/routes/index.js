@@ -40,9 +40,8 @@ exports.saveUrls = function(req, res, next) {
     UrlModel.find(function(err, entries) {
       if (err) return console.error(err);
       console.log('ADD NEW URL');
-      res.render('list', {entries: entries});
+      res.redirect('/', {entries: entries});
     });
-
     // return res.send(200, {
     //   status : "OK",
     //   modelId: urlInst._id

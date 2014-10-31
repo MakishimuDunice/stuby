@@ -37,14 +37,13 @@ if ('production' == app.get('env')) {
 
 // Routes
 
-
 app.get( '/', routes.index);
 app.post("/save", routes.saveUrls);
 app.post("/del", routes.delUrl);
 
 // Listening
 
-app.listen(app.get("port") || 3000, function(){
+app.listen(app.get("port") || 3333, function(){
   console.log("Express server listening on port %d in %s mode", app.get('port'), app.settings.env);
 });
 

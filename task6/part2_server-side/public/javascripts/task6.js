@@ -6,12 +6,17 @@ $(document).ready(function (){
 
         var urlRegex = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
         var urltest=urlRegex.test(url);
+
         // validation is here
+
         if(!urltest) {
           alert('ERRROR. NO VALID URL!');
           return
         }
         $.ajax({
+
+          // TODO Добавить error handler для ajax запроса к bitly
+
             url:"http://api.bit.ly/v3/shorten",
             data:{
                 longUrl:url,
@@ -19,7 +24,7 @@ $(document).ready(function (){
                 login:username
             },
             dataType:"jsonp",
-            success: function beatly(data){
+            success: function (data){
                 var short = data.data.url;
                 save_url(url, short);
             }
@@ -35,6 +40,9 @@ $(document).ready(function (){
         url:"http://localhost:3000/del",
         data:{id:elemId},
         dataType:"html"
+
+        // TODO Добавить error handler и success handler для обработки результатов удаления из БД
+
       });
     });
 });
@@ -49,11 +57,8 @@ function save_url(long_url, short_url) {
     },
     type: "POST",
     dataType: "json"
-    // success: function(data, textStatus, jqXHR ) {
-    //   alert(data.status + "\n" + data.modelId);
-    // },
-    // error: function(jqXHR, textStatus, errorThrown ) {
-    //   console.log("error", jqXHR);
-    // }
+
+    // TODO Добавить error handler и success handler для обработки результатов сохранения в БД
+
   });
 }
