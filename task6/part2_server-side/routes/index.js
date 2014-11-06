@@ -22,7 +22,7 @@ exports.saveUrls = function(req, res, next) {
     if(err) {
       console.error("Error saving model", err);
 
-      return res.send(200, {
+      return res.json(500, {
         status : "ERROR",
         modelId: "",
         message: err.message
@@ -31,21 +31,15 @@ exports.saveUrls = function(req, res, next) {
 
     if(!urlInst) {
       console.error("No url saved");
-      return res.send(200, {
+      return res.json(500, {
         status : "ERROR",
         modelId: "",
         message: "There aren't the model you are looking for"
       });
     }
-    UrlModel.find(function(err, entries) {
-      if (err) return console.error(err);
-      console.log('ADD NEW URL');
-      res.redirect('/', {entries: entries});
-    });
-    // return res.send(200, {
-    //   status : "OK",
-    //   modelId: urlInst._id
-    // });
+
+    console.log('ADD NEW URL');
+    res.json(200, urlInst.toJSON());
   });
 };
 exports.delUrl = function(req, res) {
@@ -53,12 +47,13 @@ exports.delUrl = function(req, res) {
   var elemId = req.body.id;
   var elem = UrlModel.find({_id: elemId});
   elem.remove(function(err, entry) {
-    if (err) return console.error(err);
+    if (err)
+      return res.json(500, {
+        error: err
+      });
 
-      UrlModel.find(function(err, entries) {
-        if (err) return console.error(err);
-        res.render('list', { entries: entries});
-  });
+    console.log(entry);
+    return res.json(200, {});
   });
 
 }

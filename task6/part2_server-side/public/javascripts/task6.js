@@ -15,7 +15,7 @@ $(document).ready(function (){
         }
         $.ajax({
 
-          // TODO Добавить error handler для ajax запроса к bitly
+//          TODO Добавить error handler для ajax запроса к bitly
 
             url:"http://api.bit.ly/v3/shorten",
             data:{
@@ -24,10 +24,16 @@ $(document).ready(function (){
                 login:username
             },
             dataType:"jsonp",
+
             success: function (data){
                 var short = data.data.url;
                 save_url(url, short);
+            },
+
+            error: function (status, error){
+              console.log(status,error);
             }
+
         });
     });
     $('.delete').click(function() {
@@ -39,9 +45,16 @@ $(document).ready(function (){
         type: "POST",
         url:"http://localhost:3000/del",
         data:{id:elemId},
-        dataType:"html"
+        dataType:"json",
 
         // TODO Добавить error handler и success handler для обработки результатов удаления из БД
+
+        error: function (jqXHR, textStatus, errorThrown){
+            console.log(textStatus, errorThrown);
+        },
+        success: function(data, textStatus, jqXHR) {
+          $("input#"+elemId).parent().remove();
+        }
 
       });
     });
@@ -49,6 +62,16 @@ $(document).ready(function (){
 
 
 function save_url(long_url, short_url) {
+  var template = "<li>" +
+      "<span class='name'>Short url:" +
+        "<a href='PUT_SHORT_URL_HERE'>PUT_SHORT_URL_HERE</a><br>" +
+      "</span>" +
+      "<span class='title'>Long url:" +
+        "<a href='PUT_LONG_URL_HERE'>PUT_LONG_URL_HERE</a>" +
+      "</span>" +
+      "<input type='button' class='delete' value='X' id='entry._id'>" +
+    "</li>";
+
   $.ajax({
     url: "/save",
     data: {
@@ -56,9 +79,19 @@ function save_url(long_url, short_url) {
       short_url: short_url
     },
     type: "POST",
-    dataType: "json"
+    dataType: "json",
 
     // TODO Добавить error handler и success handler для обработки результатов сохранения в БД
+
+    error: function (jqXHR, textStatus, errorThrown){
+      console.log(textStatus, errorThrown);
+    },
+    success: function(data, textStatus, jqXHR) {
+      template = template.replace('entry._id', data._id);
+      template = template.replace(/PUT_SHORT_URL_HERE/g, data.short_url);
+      template = template.replace(/PUT_LONG_URL_HERE/g, data.long_url);
+      $("ol").append(template);
+    }
 
   });
 }
