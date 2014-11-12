@@ -15,7 +15,7 @@ $(document).ready(function (){
         }
         $.ajax({
 
-//          TODO Добавить error handler для ajax запроса к bitly
+//          TODO Добавить error handler для ajax запроса к bitly (готово)
 
             url:"http://api.bit.ly/v3/shorten",
             data:{
@@ -47,7 +47,7 @@ $(document).ready(function (){
         data:{id:elemId},
         dataType:"json",
 
-        // TODO Добавить error handler и success handler для обработки результатов удаления из БД
+        // TODO Добавить error handler и success handler для обработки результатов удаления из БД (готово)
 
         error: function (jqXHR, textStatus, errorThrown){
             console.log(textStatus, errorThrown);
@@ -81,7 +81,7 @@ function save_url(long_url, short_url) {
     type: "POST",
     dataType: "json",
 
-    // TODO Добавить error handler и success handler для обработки результатов сохранения в БД
+    // TODO Добавить error handler и success handler для обработки результатов сохранения в БД (готово)
 
     error: function (jqXHR, textStatus, errorThrown){
       console.log(textStatus, errorThrown);

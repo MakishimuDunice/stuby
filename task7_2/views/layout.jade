@@ -2,11 +2,13 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width')
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
     title= Task7
     block css
       link(rel='stylesheet', href='/css/style.css')
     block js
-      script(src='http://localhost:35729/livereload.js')
+      script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js')
+      script(src='https://maps.googleapis.com/maps/api/js?v=3.exp')
+      script(src='/js/maps.js')
   body
     block content

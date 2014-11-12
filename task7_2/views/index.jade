@@ -11,10 +11,12 @@ block content
           input#lat_inp(placeholder = 'latitude')
 
           input#long_inp(placeholder = 'longitude')
-      div
+      div#bot_cont_ldl
         label Enter radius' value
           input#bot_inp(placeholder = 'radius')
-    div#map_cont
-    div#addresses
+  button#go_button
+  div#map_cont
+
+  div#addresses From below, you can see the doctors' addresses list.
       #list
         include list.jade
