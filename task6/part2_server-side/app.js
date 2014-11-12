@@ -28,11 +28,11 @@ app.use(express.static(__dirname + '/public'));
 // development only
 if ('development' == app.get('env')) {
   app.use(errorHandler());
-  app.set("port", 3000);
+  app.set("port", 3001);
 }
 if ('production' == app.get('env')) {
   app.use(errorHandler());
-  app.set("port", 3000);
+  app.set("port", 3001);
 }
 
 // Routes

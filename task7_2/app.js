@@ -1,12 +1,14 @@
 var express = require('express');
 var path = require('path');
+var mongoose = require('mongoose');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 var users = require('./routes/user');
+
+mongoose.connect('mongodb://localhost:27017/task7');
 
 var app = express();
 
