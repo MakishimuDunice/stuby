@@ -1,12 +1,14 @@
-//               Сделать добавляющийся список адресов докторов !!!
-//ol
-//  each entry in entries
-//    li
-//      span.name Short url:
-//        a(href=entry.short_url)= entry.short_url
-//        br
-//      span.title Long url:
-//        a(href=entry.long_url)= entry.long_url
-//      input.delete(type="button", value="X", id=entry._id)
-//
+ol
+  each entry in entries
+    li
+      span.name Широта:
+        a(href=entry.latitude_value)= entry.latitude_value
+        br
+      span.title Долгота:
+        a(href=entry.longitude_value)= entry.longitude_value
+        br
+      span.title Адрес:
+        a(href=entry.address)= entry.address
+      input.delete(type="button", value="X", id=entry._id)
+
 
