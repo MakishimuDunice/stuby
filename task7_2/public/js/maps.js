@@ -1,9 +1,10 @@
 $(document).ready(function() {
-  $('#bot_cont_ldl').click(function () {
+  $('#go_button').click(function () {
     var latitude = $('input[name =latitude_value]').val();
     var longitude = $('input[name=longitude_value]').val();
     var radius = $('input[name=radius_value]').val();
     var key = ('AIzaSyB2QoF81Ng94UY1e4ZaSIi-9k5tNHJj8Uo');
+    var doctor = 'doctor';
 
     $.ajax({
 

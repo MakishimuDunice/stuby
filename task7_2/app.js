@@ -27,10 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.post("/save", routes.saveAddresses); // Вместо saveUrls - искать в роутах
-app.post("/del", routes.delAddress);     // Аналогично, поправить под это задание по аналогии с Task6
 
 /// catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
@@ -67,6 +66,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 // my part
+// Address and coordinates saving in DB
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
