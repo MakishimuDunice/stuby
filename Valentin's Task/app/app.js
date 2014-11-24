@@ -12,7 +12,7 @@ var express = require('express')
   , errorHandler = require('errorhandler');
 
 
-mongoose.connect('mongodb://localhost/task6_part2');
+mongoose.connect('mongodb://localhost/Valentin_task');
 var app = express();
 
 // Configuration
@@ -24,6 +24,7 @@ app.use(bodyParser());
 app.use(cookieParser());
 app.use(methodOverride());
 app.use(express.static(__dirname + '/public'));
+
 
 // development only
 if ('development' == app.get('env')) {
@@ -52,7 +53,7 @@ app.listen(app.get("port") || 3333, function(){
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
-    console.log("Connected to mongodb://localhost/task6_part2");
+    console.log("Connected to mongodb://localhost/Valentin_task");
 });
 var URLSchema = new mongoose.Schema({
   long_url: String,
