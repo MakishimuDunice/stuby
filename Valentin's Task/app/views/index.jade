@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div#left-side
+      img#fish(src='/images/pufferfish.png')
+      h1= title
+      p Put your loooooooong URL in text field in bottom area!
+      input(type='text', name='long-url-text-box')#input-field
+      button#button Push to madness!!
+  div#urls
+      b You can see SHORT URLs here:
+      #list
+        include list.jade
+

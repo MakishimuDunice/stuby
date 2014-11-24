@@ -1,14 +1,17 @@
 $(document).ready(function() {
+
+  var latitude = $("#lat_inp").val();
+  var longitude = $("#long_inp").val();
+  var radius = $("#bot_inp").val();
+  var key = ('AIzaSyBMmYj2dxWCUh7toNymZjjC9VwHo2CKSJo');
+  var doctor = 'doctor';
+
   $('#go_button').click(function () {
-    var latitude = $('input[name =latitude_value]').val();
-    var longitude = $('input[name=longitude_value]').val();
-    var radius = $('input[name=radius_value]').val();
-    var key = ('AIzaSyB2QoF81Ng94UY1e4ZaSIi-9k5tNHJj8Uo');
-    var doctor = 'doctor';
+
 
     $.ajax({
 
-      url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
+      url: "https://maps.googleapis.com/maps/api/place/nearbysearch/",
       data: {
         key: key,
         location: latitude + ',' + longitude,
@@ -31,6 +34,9 @@ $(document).ready(function() {
         console.log(status, error);
       }
     });
+
+
+
   });
   $('.delete').click(function() {
     var elemID = this.id;
@@ -93,15 +99,24 @@ function save_data(latitude_value, longitude_value, address) {
 }
                     // !!!!!! Отрисовка карты - НЕ сделана !!!!!!
 
-//  var map;
-//  function initialize() {
-//    var mapOptions = {
-//      zoom: 8,
-//      center: new google.maps.LatLng( latitude, longitude )
-//    };
-//    map = new google.maps.Map(document.getElementById('map_cont'),
-//      mapOptions);
-//  }
-//  google.maps.event.addDomListener(window, 'load', initialize);
+
+//function initialize() {
+//  var mapOptions = {
+//    zoom: 8,
+//    center: new google.maps.LatLng(latitude, longitude),
+//    radius: radius
+//  };
 //
-//})
+//  var map = new google.maps.Map(document.getElementById('map_cont'),
+//    mapOptions);
+//}
+//
+//function loadScript() {
+//  var script = document.createElement('script');
+//  script.type = 'text/javascript';
+//  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+//    'callback=initialize';
+//  document.body.appendChild(script);
+//}
+//
+//window.onload = loadScript;
