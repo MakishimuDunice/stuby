@@ -22,15 +22,16 @@ a {
     padding:50px 0 0 50px;
     width:800px;
 }
+#input-field {
+  width: 440px;
+  margin-right: 10px;
+}
 #urls{
     display:inline-block;
     margin:50px 0 0 50px;
 }
 span.title {
   visibility: hidden;
-}
-.show_long_url{
-  visibility: visible;
 }
 .ch_b{
   margin-left:10px;

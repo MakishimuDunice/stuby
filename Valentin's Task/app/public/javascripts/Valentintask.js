@@ -1,21 +1,36 @@
 $(document).ready(function (){
-
   $('#button').on("click", bitly_url);
-  $('#show_long_url').on("click", show_boobs);
+  $('.show_long_url').on("click", show_boobs);
   $('#input-field').keyup(function(){
     if(event.keyCode==13)
     {
       bitly_url();
     }
   });
-
   $('.delete').click(deleteUrl);
+
+// Счёт строк и реализация многостраничности будет тут !!!!!!!!!!!!!!!!!!!!!
+
+  var line_nubber = function () {
+    console.log($('#list').find("li").length);
+  };
+  line_nubber();
+
+  if (line_nubber > 11){
+
+  }
+
+
 });
 
-var show_boobs = function (){
-  $(this).parent().css({visibility: "visible"})
+// Показывает скрытый элемент - длинный адрес
 
+var show_boobs = function (e){
+  var target = e.target;
+  $(target).parent().find(".title").removeClass("title");
 };
+
+// Удалние записи
 
 var deleteUrl = function() {
   var elemId = this.id;
@@ -37,6 +52,8 @@ var deleteUrl = function() {
 
   });
 };
+
+// Получение короткого адреса
 
 var bitly_url = function () {
   var url = $('input[name=long-url-text-box]').val();
@@ -70,6 +87,7 @@ var bitly_url = function () {
   });
 };
 
+// Сохранение в БД и вывод
 
 function save_url(long_url, short_url) {
   var template = "<li>" +
@@ -81,8 +99,8 @@ function save_url(long_url, short_url) {
       "<span class='title'>Long url:" +
         "<a href='PUT_LONG_URL_HERE'>PUT_LONG_URL_HERE</a>" +
       "</span>" +
-      "<input type='button' class='show_long_url' value='Show long URL'>" +
       "<br>" +
+      "<input type='button' class='show_long_url' value='Show long URL'>" +
       "<input type='button' class='delete' value='Delete record' id='entry._id'>" +
     "</li>";
 
@@ -108,3 +126,6 @@ function save_url(long_url, short_url) {
 
   });
 }
+
+
+
