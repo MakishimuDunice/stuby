@@ -9,7 +9,7 @@ $(document).ready(function (){
   });
   $('.delete').click(deleteUrl);
 
-// Счёт строк и реализация многостраничности будет тут !!!!!!!!!!!!!!!!!!!!!
+// Счёт строк и реализация многостраничности будет тут !!!!!!!!!!!!!!!!!!!
 
   var line_nubber = function () {
     console.log($('#list').find("li").length);

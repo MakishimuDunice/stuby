@@ -1,6 +1,22 @@
 extends layout
 
 block content
-  h1= "Task 7"
-  p Welcome to #{title}
 
+  div#all_cont_wrapper
+    h1= "Task 7"
+    p Enter value of center and radius of doctor searching.
+    div#lbl_cont
+      div#top_cont_lbl
+        label Enter point coordinates
+          input#lat_inp(placeholder = 'latitude')(name ='latitude_value')
+
+          input#long_inp(placeholder = 'longitude')(name ='longitude_value')
+      div#bot_cont_ldl
+        label Enter radius' valuel
+          input#bot_inp(placeholder = 'radius')(name ='radius_value')
+      button#go_button Push to start
+  div#map_cont
+
+  div#addresses From below, you can see the doctors' addresses list.
+      #list
+        include list
